@@ -86,6 +86,8 @@ The assembler for this setup is not yet written, but the codes given in the `asm
 For a 16-bit binary, it is divided into 4-bit binary numbers, which then each represents a number and this 4 digit number is a hexadecimal number.
 
 ### Example
+Addition of two numbers
+
 
 | ASSEMBLY LANG           | INSTRUCTION      | HEXADECIMAL | Comment                                                      |
 | ----------------------- | ---------------- | ----------- | ------------------------------------------------------------ |
