@@ -77,4 +77,21 @@ The instruction is a group of 16-bit binary which is segmented into the followin
 |    1100     |                      PC &larr; JUMP_DES                      |
 |    1111     |                             HALT                             |
 
-When the Opcode is 0000, the least significant 8-bits act as an immediate value in the instruction which is written inside a register in the register bank. For all the Opcode other than 0000, the least significant 8-bit are divided into 4-bit pair in which they store the values of addresses of Register B and Register A respectively. 
+When the Opcode is 0000, the least significant 8-bits act as an immediate value in the instruction which is written inside a register in the register bank. For all the Opcode other than 0000, the least significant 8-bit are divided into 4-bit pair in which they store the values of addresses of Register B and Register A respectively. The 4-bits after the opcode are the `WRITE_ADD` where any operation that we are performing is written to.  
+
+### Assembly to Hex
+The assembler for this setup is not yet written, but the codes given in the `asmHex` folder contain example Hex codes for this setup.
+
+**Binary to Hex**
+For a 16-bit binary, it is divided into 4-bit binary numbers, which then each represents a number and this 4 digit number is a hexadecimal number.
+
+### Example
+
+**Addition of two numbers**
+| ASSEMBLY LANG           | INSTRUCTION      | HEXADECIMAL | Comment                                                      |
+| ----------------------- | ---------------- | ----------- | ------------------------------------------------------------ |
+| MOV A &larr; 6          | 0000000000000110 | 0006        | We are moving 6 to Register at 0000 address i.e., Register A |
+| MOV B &larr; 9          | 0000000100001001 | 0109        | We are moving 9 to Register at 0001 address i.e., Register B |
+| ADD REG A + REG B       | 0111001000010000 | 7210        | We are adding values at Register A and Register B and writing the output on Register C i.e., Register at address 0010. |
+| STORE OMEM &larr; REG C | 1011000000000010 | b002        | We are storing the output of the sum from Register C to a memory location in the RAM. |
+| HALT                    | 1111000000000000 | f000        | HALT state. Machine stops.                                   |
