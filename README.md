@@ -21,7 +21,7 @@ We will cover the necessary component specification below.
 
 The unit that controls all the logical and arithmetic operations. 
 
-![ALU](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/new.png)
+![ALU](new.png)
 
 
 
