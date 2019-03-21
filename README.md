@@ -8,7 +8,7 @@ Our project for the course Computer Architecture, the following is the working a
 
 The CPU is shown below. It consists of all the necessary components required by any CPU. This simulation is done on Logisim.
 
-![CPU](CPU.png)
+![CPU](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/CPU.png)
 
 
 
@@ -18,10 +18,9 @@ We will cover the necessary component specification below.
 
 1. **Arithmetic Logic Unit**
 
-
 The unit that controls all the logical and arithmetic operations. 
 
-![ALU](new.png)
+![ALU](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/new.png)
 
 
 
@@ -44,9 +43,9 @@ The codes written along the ALU are the inputs in the `MUX_Con` .
 
 
 
-2. **Register Bank**
+1. **Register Bank**
 
-![Register Bank](regbank.png)
+![Register Bank](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/regbank.png)
 
 
 
@@ -54,9 +53,9 @@ This is 8-bit x 16 register, Register Bank. It consists of 16 Registers which st
 
 
 
-3. **Control Unit**
+1. **Control Unit**
 
-![](CU.png)
+![](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/CU.png)
 
 
 
@@ -64,7 +63,7 @@ The Control Unit just uses the opcode to determine which flags to turn on or off
 
 The instruction is a group of 16-bit binary which is segmented into the following format, 
 
-![](Instruction.png)
+![](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/Instruction.png)
 
 |   OPCODE    |                         Description                          |
 | :---------: | :----------------------------------------------------------: |
@@ -77,9 +76,10 @@ The instruction is a group of 16-bit binary which is segmented into the followin
 |    1100     |                      PC &larr; JUMP_DES                      |
 |    1111     |                             HALT                             |
 
-When the Opcode is 0000, the least significant 8-bits act as an immediate value in the instruction which is written inside a register in the register bank. For all the Opcode other than 0000, the least significant 8-bit are divided into 4-bit pair in which they store the values of addresses of Register B and Register A respectively. The 4-bits after the opcode are the `WRITE_ADD` where any operation that we are performing is written to.  
+When the Opcode is 0000, the least significant 8-bits act as an immediate value in the instruction which is written inside a register in the register bank. For all the Opcode other than 0000, the least significant 8-bit are divided into 4-bit pair in which they store the values of addresses of Register B and Register A respectively.  The 4-bits after the opcode are the `WRITE_ADD` where any operation that we are performing is written to.  
 
 ### Assembly to Hex
+
 The assembler for this setup is not yet written, but the codes given in the `asmHex` folder contain example Hex codes for this setup.
 
 **Binary to Hex**
@@ -87,11 +87,11 @@ For a 16-bit binary, it is divided into 4-bit binary numbers, which then each re
 
 ### Example
 
-**Addition of two numbers**
 | ASSEMBLY LANG           | INSTRUCTION      | HEXADECIMAL | Comment                                                      |
-| :-----------------------: | :----------------: | :-----------: | :------------------------------------------------------------: |
+| ----------------------- | ---------------- | ----------- | ------------------------------------------------------------ |
 | MOV A &larr; 6          | 0000000000000110 | 0006        | We are moving 6 to Register at 0000 address i.e., Register A |
 | MOV B &larr; 9          | 0000000100001001 | 0109        | We are moving 9 to Register at 0001 address i.e., Register B |
 | ADD REG A + REG B       | 0111001000010000 | 7210        | We are adding values at Register A and Register B and writing the output on Register C i.e., Register at address 0010. |
 | STORE OMEM &larr; REG C | 1011000000000010 | b002        | We are storing the output of the sum from Register C to a memory location in the RAM. |
 | HALT                    | 1111000000000000 | f000        | HALT state. Machine stops.                                   |
+
