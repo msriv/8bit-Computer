@@ -2,7 +2,7 @@
 
 # 8bit Computer
 
-Developed by Hatim Nomani(@hatimmnomani) and Mihir Srivastava(@msriv)
+Developed by Hatim Nomani(@hatimmnomani/www.github.com/hatimmnomani) and Mihir Srivastava(@msriv/[msriv]www.github.com/msriv)
 
 Our project for the course Computer Architecture, the following is the working and specification of this 8-bit Computer. 
 
