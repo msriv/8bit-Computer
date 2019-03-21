@@ -79,11 +79,10 @@ The instruction is a group of 16-bit binary which is segmented into the followin
 When the Opcode is 0000, the least significant 8-bits act as an immediate value in the instruction which is written inside a register in the register bank. For all the Opcode other than 0000, the least significant 8-bit are divided into 4-bit pair in which they store the values of addresses of Register B and Register A respectively.  The 4-bits after the opcode are the `WRITE_ADD` where any operation that we are performing is written to.  
 
 ### Assembly to Hex
-
 The assembler for this setup is not yet written, but the codes given in the `asmHex` folder contain example Hex codes for this setup.
 
-**Binary to Hex**
-For a 16-bit binary, it is divided into 4-bit binary numbers, which then each represents a number and this 4 digit number is a hexadecimal number.
+#### Binary to Hex
+For a 16-bit binary, it is divided into 4-bit binary numbers, which then each represents a number and this 4 digit number is a hexadecimal number. We require hexadecimal representation because the ROM and RAM take the inputs in hexadecimal format.
 
 ### Example
 Addition of two numbers
