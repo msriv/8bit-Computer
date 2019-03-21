@@ -8,7 +8,7 @@ Our project for the course Computer Architecture, the following is the working a
 
 The CPU is shown below. It consists of all the necessary components required by any CPU. This simulation is done on Logisim.
 
-![CPU](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/CPU.png)
+![CPU](CPU.png)
 
 
 
@@ -46,7 +46,7 @@ The codes written along the ALU are the inputs in the `MUX_Con` .
 
 2. **Register Bank**
 
-![Register Bank](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/regbank.png)
+![Register Bank](regbank.png)
 
 
 
@@ -56,7 +56,7 @@ This is 8-bit x 16 register, Register Bank. It consists of 16 Registers which st
 
 3. **Control Unit**
 
-![](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/CU.png)
+![](CU.png)
 
 
 
@@ -64,7 +64,7 @@ The Control Unit just uses the opcode to determine which flags to turn on or off
 
 The instruction is a group of 16-bit binary which is segmented into the following format, 
 
-![](/home/msrivastava/Documents/SEMESTER4/Computer_Architecture/Git_Repo/Instruction.png)
+![](Instruction.png)
 
 |   OPCODE    |                         Description                          |
 | :---------: | :----------------------------------------------------------: |
