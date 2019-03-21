@@ -89,7 +89,7 @@ For a 16-bit binary, it is divided into 4-bit binary numbers, which then each re
 
 **Addition of two numbers**
 | ASSEMBLY LANG           | INSTRUCTION      | HEXADECIMAL | Comment                                                      |
-| ----------------------- | ---------------- | ----------- | ------------------------------------------------------------ |
+| :-----------------------: | :----------------: | :-----------: | :------------------------------------------------------------: |
 | MOV A &larr; 6          | 0000000000000110 | 0006        | We are moving 6 to Register at 0000 address i.e., Register A |
 | MOV B &larr; 9          | 0000000100001001 | 0109        | We are moving 9 to Register at 0001 address i.e., Register B |
 | ADD REG A + REG B       | 0111001000010000 | 7210        | We are adding values at Register A and Register B and writing the output on Register C i.e., Register at address 0010. |
